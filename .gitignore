@@ -1,0 +1,22 @@
+# Python caches and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Runtime logs
+*.log
+
+# Frontend generated artifacts
+face-enrollment-visualizer/node_modules/
+face-enrollment-visualizer/dist/
+
+# Backend capture output (keep folder only)
+# selected-captures is session output and is cleared on new session start/reset.
+backend/enrollment/*
+!backend/enrollment/.gitkeep
+backend/selected-captures/*
+!backend/selected-captures/.gitkeep
+
+# OS clutter
+.DS_Store

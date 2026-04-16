@@ -1,0 +1,9 @@
+numpy<2
+fastapi
+uvicorn
+mediapipe==0.10.21
+requests
+opencv-python-headless
+pydantic
+python-multipart
+websockets
