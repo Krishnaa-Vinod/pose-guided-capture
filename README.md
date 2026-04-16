@@ -1,5 +1,7 @@
 # pose-guided-capture-demo
 
+![Enrollment UI - main view](images/Screenshot%20from%202026-04-16%2000-00-44.png)
+
 Pose-guided face enrollment demo with:
 
 - `backend/`: FastAPI + MediaPipe processing and guidance pipeline
@@ -119,6 +121,6 @@ npm run build
 
 ## Screenshots
 
-![Enrollment UI - main view](images/Screenshot%20from%202026-04-16%2000-00-44.png)
+
 
 ![Enrollment UI - progress view](images/Screenshot%20from%202026-04-16%2000-01-12.png)
