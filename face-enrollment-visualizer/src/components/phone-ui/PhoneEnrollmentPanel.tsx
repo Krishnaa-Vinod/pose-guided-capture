@@ -1,4 +1,4 @@
-import { CheckCircle2, FolderKanban, Loader2, Play, RotateCcw, Volume2, VolumeX } from 'lucide-react'
+import { CheckCircle2, Loader2, Play, RotateCcw, Volume2, VolumeX } from 'lucide-react'
 import { ProgressRing } from './ProgressRing'
 
 interface PhoneEnrollmentPanelProps {
@@ -75,7 +75,6 @@ export const PhoneEnrollmentPanel = ({
               {snapshot?.prompt && (
                 <div className="absolute right-4 top-4 z-30 max-w-[170px] rounded-xl border border-orange-300/50 bg-orange-950/90 px-3 py-2 text-right text-xs text-orange-100 shadow-lg backdrop-blur-md">
                   <div className="font-medium text-[13px] leading-tight">{snapshot.prompt.text}</div>
-                  <div className="mt-1 text-[10px] text-orange-100/70">{snapshot.prompt.reason}</div>
                 </div>
               )}
 
@@ -108,7 +107,7 @@ export const PhoneEnrollmentPanel = ({
                       </div>
                     </div>
                     <h3 className="text-lg font-bold text-orange-100">Enrollment complete</h3>
-                    <p className="text-xs text-orange-100/70">{snapshot?.sessionLabel || 'Session'} saved curated views.</p>
+                    <p className="text-xs text-orange-100/70">Your curated views are saved.</p>
                   </div>
                 </div>
               )}
@@ -143,10 +142,9 @@ export const PhoneEnrollmentPanel = ({
                   <p className="mt-1 font-mono text-lg font-bold text-orange-100">{progressPct}%</p>
                 </div>
                 <div className="rounded-lg border border-orange-400/25 bg-orange-600/20 px-3 py-2 text-right">
-                  <p className="text-[10px] uppercase tracking-[0.14em] text-orange-300/80">Session</p>
-                  <p className="mt-1 inline-flex items-center gap-1 text-xs font-mono text-orange-100">
-                    <FolderKanban className="h-3.5 w-3.5 text-orange-300" />
-                    {snapshot?.sessionLabel || 'session'}
+                  <p className="text-[10px] uppercase tracking-[0.14em] text-orange-300/80">State</p>
+                  <p className="mt-1 text-xs font-semibold text-orange-100">
+                    {stateLabel[snapshot?.state] || snapshot?.state || 'Idle'}
                   </p>
                 </div>
               </div>
